@@ -1,0 +1,20 @@
+.list__title {
+  @apply grid grid-cols-[20%_60%_20%]
+  bg-primary-varient;
+}
+
+.list__moderator {
+  @apply text-left;
+}
+
+.list__description {
+  @apply text-center;
+}
+
+.list__id {
+  @apply text-right;
+}
+
+.list__header {
+  @apply text-left grid grid-cols-[10%_15%_15%_60%];
+}
