@@ -1,20 +1,33 @@
-.list__title {
-  @apply grid grid-cols-[20%_60%_20%]
-  bg-primary-varient;
+.list {
+  @apply h-screen;
 }
 
-.list__moderator {
+.title {
+  @apply grid grid-cols-[20%_60%_20%]
+  bg-primary;
+}
+
+.title__moderator {
   @apply text-left;
 }
 
-.list__description {
+.title__description {
   @apply text-center;
 }
 
-.list__id {
+.title__id {
   @apply text-right;
 }
 
-.list__header {
-  @apply text-left grid grid-cols-[10%_15%_15%_60%];
+.header {
+  @apply text-left grid grid-cols-[8%_15%_15%_62%]
+  bg-background-varient;
+}
+
+.article-list {
+  @apply h-full;
+}
+
+.article-list__row {
+  @apply text-left grid grid-cols-[8%_15%_15%_62%];
 }

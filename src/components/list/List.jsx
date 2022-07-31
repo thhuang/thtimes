@@ -1,21 +1,16 @@
 import React from 'react';
 import './list.css';
+import Title from './Title';
+import Header from './Header';
+import ArticleList from './ArticleList';
 
 const List = () => {
   return (
-    <>
-      <section className="list__title">
-        <div className="list__moderator">[thhuang]</div>
-        <div className="list__description">The TH Times</div>
-        <div className="list__id">thtimes</div>
-      </section>
-      <section className="list__header">
-        <div>ID</div>
-        <div>Date</div>
-        <div>Author</div>
-        <div>Title</div>
-      </section>
-    </>
+    <div className="list">
+      <Title />
+      <Header />
+      <ArticleList />
+    </div>
   );
 };
 
