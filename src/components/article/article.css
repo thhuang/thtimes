@@ -1,3 +1,19 @@
-.header__row {
-  @apply flex flex-row;
+.article {
+  @apply h-screen pb-32 overflow-scroll;
+}
+
+.article__title {
+  @apply bg-primary;
+}
+
+.article__info {
+  @apply bg-primary text-light;
+}
+
+.article__divider {
+  @apply mt-3 mb-4 border-primary-varient;
+}
+
+.article__content {
+  @apply whitespace-pre-wrap;
 }
