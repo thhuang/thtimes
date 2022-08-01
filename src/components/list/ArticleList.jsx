@@ -9,6 +9,7 @@ for (let i = 1; i <= 30; i++) {
     date: faker.date.future().toISOString().slice(0, 10),
     author: faker.name.firstName(),
     title: faker.random.words(4),
+    tag: faker.random.alpha(4),
   });
 }
 
@@ -21,7 +22,7 @@ const ArticleList = () => {
             <div>{a.id}</div>
             <div>{a.date}</div>
             <div>{a.author}</div>
-            <div>{a.title}</div>
+            <div>{(a.tag ? '[' + a.tag + '] ' : '') + a.title}</div>
           </div>
         );
       })}
