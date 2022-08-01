@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { faker } from '@faker-js/faker';
+import CTX from '../../context';
 
 let articles = [];
 
-for (let i = 1; i <= 30; i++) {
+for (let i = 1; i <= 100; i++) {
   articles.push({
     id: i,
     date: faker.date.future().toISOString().slice(0, 10),
@@ -17,16 +18,29 @@ const ArticleList = () => {
   return (
     <section className="article-list">
       {articles.reverse().map((a) => {
-        return (
-          <div className="article-list__row">
-            <div>{a.id}</div>
-            <div>{a.date}</div>
-            <div>{a.author}</div>
-            <div>{(a.tag ? '[' + a.tag + '] ' : '') + a.title}</div>
-          </div>
-        );
+        return <ArticleRow key={a.id} article={a} />;
       })}
     </section>
+  );
+};
+
+const ArticleRow = (props) => {
+  const ctx = useContext(CTX);
+
+  const onClick = () => {
+    ctx.dispatchArticle({ type: 'select', payload: props.article.id });
+  };
+
+  return (
+    <div className="article-list__row" onClick={() => onClick()}>
+      <div>{props.article.id}</div>
+      <div>{props.article.date}</div>
+      <div>{props.article.author}</div>
+      <div>
+        {(props.article.tag ? '[' + props.article.tag + '] ' : '') +
+          props.article.title}
+      </div>
+    </div>
   );
 };
 

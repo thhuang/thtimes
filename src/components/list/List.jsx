@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import CTX from '../../context';
 import './list.css';
 import Title from './Title';
-import Header from './Header';
+import ListHeader from './ListHeader';
 import ArticleList from './ArticleList';
 
 const List = () => {
+  const ctx = useContext(CTX);
+
   return (
-    <div className="list">
+    <div className={ctx.article === null ? 'list' : 'hidden'}>
       <Title />
-      <Header />
+      <ListHeader />
       <ArticleList />
     </div>
   );

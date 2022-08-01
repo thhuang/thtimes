@@ -19,15 +19,16 @@
   @apply text-right;
 }
 
-.header {
+.list-header {
   @apply text-left grid grid-cols-[8%_15%_15%_62%]
   bg-background-varient;
 }
 
 .article-list {
-  @apply overflow-y-scroll;
+  @apply overflow-y-scroll cursor-default;
 }
 
 .article-list__row {
-  @apply text-left grid grid-cols-[8%_15%_15%_62%];
+  @apply text-left grid grid-cols-[8%_15%_15%_62%]
+  hover:bg-primary-varient;
 }
