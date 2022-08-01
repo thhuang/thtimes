@@ -32,11 +32,11 @@ const ArticleRow = (props) => {
   };
 
   return (
-    <div className="article-list__row" onClick={() => onClick()}>
-      <div>{props.article.id}</div>
-      <div>{props.article.date}</div>
-      <div>{props.article.author}</div>
-      <div>
+    <div className="list__row article-list__row" onClick={() => onClick()}>
+      <div className="list__id">{props.article.id}</div>
+      <div className="list__date">{props.article.date}</div>
+      <div className="list__author">{props.article.author}</div>
+      <div className="list__title">
         {(props.article.tag ? '[' + props.article.tag + '] ' : '') +
           props.article.title}
       </div>

@@ -3,10 +3,12 @@ import React from 'react';
 const Header = () => {
   return (
     <section className="list-header">
-      <div>ID</div>
-      <div>Date</div>
-      <div>Author</div>
-      <div>Title</div>
+      <div className="list__row">
+        <div className="list__id">ID</div>
+        <div className="list__date">Date</div>
+        <div className="list__author">Author</div>
+        <div className="list__title">Title</div>
+      </div>
     </section>
   );
 };

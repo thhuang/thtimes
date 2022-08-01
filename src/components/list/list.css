@@ -20,15 +20,33 @@
 }
 
 .list-header {
-  @apply text-left grid grid-cols-[8%_15%_15%_62%]
-  bg-background-varient;
+  @apply bg-background-varient;
 }
 
 .article-list {
-  @apply overflow-y-scroll cursor-default;
+  @apply overflow-y-scroll overflow-x-hidden cursor-default;
 }
 
 .article-list__row {
-  @apply text-left grid grid-cols-[8%_15%_15%_62%]
-  hover:bg-primary-varient;
+  @apply hover:bg-primary-varient;
+}
+
+.list__row {
+  @apply text-left flex flex-row;
+}
+
+.list__id {
+  @apply w-16 shrink-0;
+}
+
+.list__date {
+  @apply w-44 shrink-0;
+}
+
+.list__author {
+  @apply w-36 shrink-0;
+}
+
+.list__title {
+  @apply shrink whitespace-nowrap overflow-x-hidden text-ellipsis;
 }
