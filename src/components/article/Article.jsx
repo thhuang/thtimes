@@ -1,5 +1,4 @@
 import React from 'react';
-import { faker } from '@faker-js/faker';
 import { useContext } from 'react';
 import CTX from '../../context';
 import './article.css';
@@ -9,17 +8,13 @@ import Content from './Content';
 const Article = () => {
   const ctx = useContext(CTX);
 
-  const article = {
-    id: ctx.article,
-    time: faker.date.future().toISOString(),
-    author: faker.name.firstName(),
-    title: faker.random.words(10),
-    tag: faker.random.alpha(4),
-    content: faker.lorem.paragraphs(20, '\n\n'),
-  };
+  if (ctx.article === null) return <></>;
+
+  const articleId = ctx.article.toString();
+  const article = require('../../assets/articles/' + articleId + '.json');
 
   return (
-    <div className={ctx.article === null ? 'hidden' : 'article'}>
+    <div className="article">
       <Header
         title={article.title}
         author={article.author}

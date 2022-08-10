@@ -1,23 +1,11 @@
 import React, { useContext } from 'react';
-import { faker } from '@faker-js/faker';
 import CTX from '../../context';
-
-let articles = [];
-
-for (let i = 1; i <= 100; i++) {
-  articles.push({
-    id: i,
-    date: faker.date.future().toISOString().slice(0, 10),
-    author: faker.name.firstName(),
-    title: faker.random.words(4),
-    tag: faker.random.alpha(4),
-  });
-}
+import articles from '../../assets/articles/articles';
 
 const ArticleList = () => {
   return (
     <section className="article-list">
-      {articles.reverse().map((a) => {
+      {articles.map((a) => {
         return <ArticleRow key={a.id} article={a} />;
       })}
     </section>
