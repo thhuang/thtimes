@@ -3,7 +3,11 @@
 }
 
 .article__title {
-  @apply bg-primary;
+  @apply bg-primary flex flex-row justify-between;
+}
+
+.article__board_id {
+  @apply cursor-pointer hover:text-primary-varient;
 }
 
 .article__info {
