@@ -1,6 +1,6 @@
 // import { faker } from '@faker-js/faker';
 const articles = [];
-for (let i = 1; i <= 7; ++i) {
+for (let i = 1; i <= 8; ++i) {
   articles.push(require('./' + i.toString() + '.json'));
 }
 
