@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/thtimes/static/css/main.223c2b7d.css",
+    "main.js": "/thtimes/static/js/main.b4e797d1.js",
+    "index.html": "/thtimes/index.html",
+    "main.223c2b7d.css.map": "/thtimes/static/css/main.223c2b7d.css.map",
+    "main.b4e797d1.js.map": "/thtimes/static/js/main.b4e797d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.223c2b7d.css",
+    "static/js/main.b4e797d1.js"
+  ]
+}
