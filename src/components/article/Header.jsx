@@ -6,7 +6,7 @@ const Header = (props) => {
     <div className="article__header">
       <section className="article__title">
         <div>{(props.tag ? '[' + props.tag + '] ' : '') + props.title}</div>
-        <Link to="/">
+        <Link to="/thtimes">
           <div className="article__board_id">&lt;thtimes&gt;</div>
         </Link>
       </section>

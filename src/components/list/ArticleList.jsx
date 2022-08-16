@@ -13,7 +13,7 @@ const ArticleList = () => {
 
 const ArticleRow = (props) => {
   return (
-    <Link to={'/' + props.article.id}>
+    <Link to={'/thtimes/' + props.article.id}>
       <div className="list__row article-list__row">
         <div className="list__id">{props.article.id}</div>
         <div className="list__date">{props.article.date}</div>

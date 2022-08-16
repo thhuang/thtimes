@@ -5,8 +5,8 @@ import Article from './components/article/Article';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<List />} />
-      <Route path="/:articleId" element={<Article />} />
+      <Route path="/thtimes" element={<List />} />
+      <Route path="/thtimes/:articleId" element={<Article />} />
     </Routes>
   );
 }
