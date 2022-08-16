@@ -1,16 +1,11 @@
 import React from 'react';
-import { useContext } from 'react';
-import CTX from '../../context';
+import { useParams } from 'react-router-dom';
 import './article.css';
 import Header from './Header';
 import Content from './Content';
 
 const Article = () => {
-  const ctx = useContext(CTX);
-
-  if (ctx.article === null) return <></>;
-
-  const articleId = ctx.article.toString();
+  const { articleId } = useParams();
   const article = require('../../assets/articles/' + articleId + '.json');
 
   return (

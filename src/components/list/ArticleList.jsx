@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import CTX from '../../context';
+import { Link } from 'react-router-dom';
 import articles from '../../assets/articles/articles';
 
 const ArticleList = () => {
@@ -13,22 +12,18 @@ const ArticleList = () => {
 };
 
 const ArticleRow = (props) => {
-  const ctx = useContext(CTX);
-
-  const onClick = () => {
-    ctx.dispatchArticle({ type: 'select', payload: props.article.id });
-  };
-
   return (
-    <div className="list__row article-list__row" onClick={() => onClick()}>
-      <div className="list__id">{props.article.id}</div>
-      <div className="list__date">{props.article.date}</div>
-      <div className="list__author">{props.article.author}</div>
-      <div className="list__title">
-        {(props.article.tag ? '[' + props.article.tag + '] ' : '') +
-          props.article.title}
+    <Link to={'/' + props.article.id}>
+      <div className="list__row article-list__row">
+        <div className="list__id">{props.article.id}</div>
+        <div className="list__date">{props.article.date}</div>
+        <div className="list__author">{props.article.author}</div>
+        <div className="list__title">
+          {(props.article.tag ? '[' + props.article.tag + '] ' : '') +
+            props.article.title}
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
