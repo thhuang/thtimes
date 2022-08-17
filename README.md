@@ -2,4 +2,4 @@
 
 ☝️ It's my diary!
 
-(English version coming soon...)
+(RWD and English version coming soon...)
