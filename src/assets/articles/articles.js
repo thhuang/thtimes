@@ -1,8 +1,12 @@
 // import { faker } from '@faker-js/faker';
+
 const articles = [];
-for (let i = 1; i <= 13; ++i) {
-  console.log(require('./' + i.toString() + '.json'));
-  articles.push(require('./' + i.toString() + '.json'));
+for (let i = 1; true; ++i) {
+  try {
+    articles.push(require('./' + i.toString() + '.json'));
+  } catch (err) {
+    break;
+  }
 }
 
 // for (let i = 3; i <= 100; i++) {
