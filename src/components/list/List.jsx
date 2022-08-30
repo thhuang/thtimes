@@ -5,7 +5,7 @@ import ArticleList from './ArticleList';
 
 const List = () => {
   return (
-    <div>
+    <div className="list">
       <Title />
       <ListHeader />
       <ArticleList />
